@@ -1,0 +1,920 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+:root {
+  --green:rgb(67, 183, 137);
+  --blue:rgb(41, 91, 160);
+}
+
+html{
+    font-size:16px;
+    font-family: "Poppins", sans-serif;
+}
+
+h1{font-size: 3.5rem;}
+h2{font-size: 3rem;}
+h3{font-size: 2.25rem;}
+h4{font-size: 1.25rem;}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header{
+  z-index: 99;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: 3px solid var(--green);
+}
+
+.navbar{  
+  height: 150px;
+  padding: 0 40px;  
+}
+
+.navLinks{
+  list-style-type: none;
+
+}
+
+.navText{
+  text-decoration: none;
+  color: var(--blue);
+  font-size: 3rem;
+  transition-property: color;
+  transition-duration: .3s;
+  padding: 0 20px;
+}
+
+.no-touch .navText:hover, .noTouch .navText:focus-within{
+  color: var(--green);
+  cursor: pointer;
+}
+
+.no-touch .navText:not(:hover){color: var(--blue);}
+
+.line{
+  width: 100%;
+  height: 3px;
+  background-color: black;
+}
+
+.line-with-endpoints {
+  width: 90%;
+  height: 3px;
+  background-color: var(--green);
+  position: relative;
+  margin: auto; 
+}
+
+.line-with-endpoints::before,
+.line-with-endpoints::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--green);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line-with-endpoints::before {
+  left: -5px;
+}
+
+.line-with-endpoints::after {
+  right: -5px;
+}
+
+footer{
+  align-items: center;
+  height: 66px;
+  background-color: var(--green);
+  font-family: var(--main-font);
+  color: white;
+  padding: 0px 50px;
+  justify-content: space-between;
+}
+
+footer a{
+  color: rgba(255, 255, 255, 0.75);
+  padding-left: 5px;
+  text-decoration: none;
+}
+
+.socials{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.facebook{  
+  background-image: url("../img/facebook.webp");
+  background-repeat: no-repeat;
+  opacity: 100%;
+  transition: opacity .3s;
+}
+.no-touch .facebook:hover, .no-touch .facebook:focus-within{
+  opacity: 50%;
+}
+
+.no-touch .facebook:not(:hover){
+  opacity: 100%;
+}
+
+.linkedin{
+  background-image: url("../img/linkedin.webp");
+  background-repeat: no-repeat;
+  opacity: 100%;
+  transition: opacity .3s;
+}
+
+.no-touch .linkedin:hover, .no-touch .linkedin:focus-within{
+  opacity: 50%;
+}
+
+.no-touch .linkedin:not(:hover){
+  opacity: 100%;
+}
+
+.instagram{
+  background-image: url("../img/instagram.webp");
+  background-repeat: no-repeat;
+  opacity: 100%;
+  transition: opacity .3s;
+}
+
+.no-touch .instagram:hover, .no-touch .instagram:focus-within{
+  opacity: 50%;
+}
+
+.no-touch .instagram:not(:hover){
+  opacity: 100%;
+}
+
+/****************************************************************/
+/*********************     index page   *************************/
+/****************************************************************/
+
+
+
+.index .hero{
+  height: 550px;
+  background-image: url("../img/Hero_Banner.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  justify-content:center;
+  text-align: center;
+  border-bottom: 3px solid var(--green);
+}
+
+.hero h1{
+    color: white;
+    margin-top: 300px;
+}
+
+.headline{
+  margin: 0px 100px;
+  margin-bottom: 106px;
+  text-align: center;
+}
+
+.headline h2{
+  color: var(--green);
+}
+
+.headline h3{
+  color: var(--blue);
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+}
+
+.specialization{
+  padding: 20px 20px 90px 20px;
+}
+
+.specialization .title img{
+  height: 80px;
+}
+
+.specialization .title{
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.specialization .title div{
+  padding-top: 10px;
+}
+
+.specContent{
+  justify-content: space-evenly;
+}
+
+#laptopWoman{
+  border-radius: 10px;
+}
+
+.specPoints{
+  padding-top: 0px;
+  padding-bottom:  0px;
+}
+
+.point{
+  justify-content: left;
+}
+
+.point h3{
+  padding-left: 20px;
+  color: var(--blue);
+  margin: 15px 0px;
+}
+
+.servicesSec h2{
+  color: var(--green);
+}
+
+.servicesSec{
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 90px;
+}
+
+.servicesSec h2{
+  color: var(--blue);
+}
+
+.service{
+  gap: 60px 60px;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.serviceBox{
+  color: var(--blue);
+  width: 47%;
+  max-width: 700px;
+  min-width: 300px;
+  min-height: 230px;
+  border-radius: 5px;
+  padding: 10px 10px;
+  box-shadow: 0px 10px 10px rgba(3, 119, 55, 0.2);
+}
+
+.serviceBox h4{
+  margin: 10px 0;
+}
+
+.insurance, .works, .goal{
+  flex-direction: column;
+  padding-bottom: 75px;
+  color: var(--blue);
+  text-align: center;
+}
+
+.insurance img{
+  width: 90%;
+}
+
+.workSteps{
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.workSteps h3{
+  padding-left: 20px;
+  margin: 15px 0;
+}
+
+.learnButton{
+  margin-top: 60px;
+  height: 45px;
+  width: 244px;
+  background-color: transparent;
+  border: solid 2px var(--green);
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition-property: background-color;
+  transition-duration: .3s;
+}
+
+.no-touch .learnButton:hover, .no-touch .learnButton:focus-within{
+  background-color: var(--blue);
+}
+
+.no-touch .learnButton:not(:hover){
+  background-color: transparent;
+}
+
+.learnButtonText{
+  text-decoration: none;
+  color: var(--green);
+}
+
+.goal{
+  margin-top: 50px;
+  padding-top: 95px;
+  color: white;
+  background-image: url("../img/bkgdGuacCroissant.webp");
+  height: 1080px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.goal q{
+  font-size: 2rem;
+  padding: 20px 300px;
+  max-width: 1900px;
+}
+
+.goal span{
+  font-size: 1.5rem;
+}
+
+#goalTitle{
+  font-size: 4em;
+  font-weight: 600;
+  padding-top: 100px;
+
+}
+.testimonial{
+    margin-top: 25px;
+}
+
+.tesText{
+  background-image: url("../img/testimonialBox.webp");
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 415px;
+  width: 415px;
+  color: var(--blue);
+  margin: 0 25px;
+}
+
+.tesText p{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.tesText span:first-child{
+  padding-top: 55px;
+}
+
+.goal img{
+  padding-top: 40px;
+}
+
+/****************************************************************/
+/*********************     about page   *************************/
+/****************************************************************/
+
+.aboutMain{
+  padding-bottom: 100px;
+}
+
+.aboutButton{
+  height: 45px;
+  width: 244px;
+  background-color: var(--blue);
+  font-size: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: solid 2px var(--blue);
+  transition-property: background-color;
+  transition-duration: .3s;
+}
+
+.no-touch .aboutButton:hover, 
+.no-touch .aboutButton:focus-within, 
+.no-touch .aboutButton:visited{
+  background-color: var(--green);
+  color: var(--blue);
+}
+
+.no-touch .aboutButton:not(:hover){
+  background-color: var(--blue);
+  color: white;
+}
+
+.buttonText{
+  text-decoration: none;
+  color: white;
+}
+
+.support, .councel{
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 0 100px;
+}
+
+.support h3{
+  color: var(--green);
+  text-align: center;
+  margin: 0px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.support p, .councel h4{
+  color: var(--blue);
+  font-size: 1.5rem;
+  padding: 0 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align:justify;
+}
+
+.support p{
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 50px;
+}
+
+ .councel h3{
+  color: var(--blue);
+  text-align: center;
+ }
+
+ .meet{
+  padding-top: 0px;
+  margin-top: 100px;
+  margin-right: 50px;
+  height: 895px;
+ }
+
+ .founder{ 
+  flex-direction: column;
+  height: 895px;
+  overflow: hidden;
+  width: 40%;
+  align-items: center;
+  padding: 0px 50px;
+ }
+
+ .founder .name{
+  font-size: 2rem;
+  color: var(--blue);
+ }
+
+ .founder ,role{
+  font-size: 1.5rem;
+  color: var(--green);
+ }
+
+ .bio{
+  flex-direction: column;
+  justify-content: space-around;
+  height: 895px;
+  width: 60%;
+  background-color: var(--green);
+  padding: 70px 150px;
+  line-height: 1.5;
+ }
+
+ .questions{
+  color: var(--blue);
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 50px 0px;
+  padding: 0px 100px;
+ }
+
+ .questions h1{
+  font-size: 5rem;
+  letter-spacing: 6px;
+  text-align: center;
+ }
+
+ .questions div{
+  justify-content: center;
+  width: 100%;
+ }
+
+ .questions h2, .questions h3{
+  margin: 0px;
+ }
+
+ .questions h3{
+  padding-bottom: 50px;
+ }
+
+ .highlight {
+  font-weight: bold;
+  font-size: 1.2em; 
+  padding: 2px 4px;
+  border-radius: 3px;
+  text-decoration: underline;
+}
+
+/****************************************************************/
+/*********************   contact page   *************************/
+/***************************************************************/
+
+.contactMain{
+  justify-content: space-evenly;
+}
+
+.contactInfo{
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.contactInfo h1{
+  padding-left: 140px;
+}
+
+.contactInfo h1, .contactMail h2, .contactPhone h2{
+  color: var(--blue);
+}
+
+.contactMail, .contactPhone{
+  justify-content: space-around;
+}
+
+.mail, .phone{
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.no-touch .mail:hover, .no-touch .mail:focus-within{
+  color: var(--green);
+}
+
+.space{
+  width: 50px;
+}
+
+.fruitbowl{
+  height: 50vh;
+  margin: 75px;
+  border-radius: 25px;
+}
+
+.contact{
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.contactFooter{
+  margin-top: auto;
+  width: 100%;
+}
+
+/****************************************************************/
+/*********************     developement page   *************************/
+/****************************************************************/
+
+#_404{ /*in the developememt html*/
+  background: url("../img/contructionBG.webp") no-repeat center center fixed; 
+}
+
+.devo{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: auto;
+  padding: 0 40px;
+}
+
+.devo h1{
+  font-size: 5rem;
+  text-align: center;
+}
+
+.devo h2{
+  text-align: center;
+}
+
+/******************************************
+/* Media Queries
+/*******************************************/
+
+@media screen and (max-width: 1650px) {
+  .navText{
+    font-size: 2rem;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 1260px){
+  .navText{
+      font-size: 1.5rem;
+      padding: 0 10px;
+    }
+}
+@media screen and (max-width: 1110px){
+    .navbar{
+      flex-direction: column;
+      padding: 0px;
+    }
+    .navLinks{padding-left: 0;}
+    .logo{height: 70%;}
+}
+
+@media screen and (max-width: 850px){
+  .point img{scale: .5;}
+}
+
+@media screen and (max-width: 720px){
+  footer{
+      height: 200px;
+      flex-direction: column;
+      padding: 20px;
+    }
+    footer ul{
+      padding: 0%;
+    }
+}
+
+@media screen and (max-width: 550px){
+  .navText{
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 400px){
+  html{font-size: 14px;}
+}
+
+
+
+.index{
+    @media screen and (max-width: 1260px) {
+    #laptopWoman{display: none;}
+    
+  }
+
+  @media screen and (max-width: 1180px){
+    h2{font-size: 2.5rem;}
+    h3{font-size: 1.3rem;}
+  }
+
+  @media screen and (max-width: 1110px){
+    
+    .hero, .goal{background-position: left;}
+    .testimonial{
+      margin-top: -80px;
+      transform: scale(.5);
+    }
+    .goal{
+      padding-top: 0px;
+    }
+    #goalTitle{font-size: 2.5rem;}
+  }
+
+  @media screen and (max-width: 1000px){
+    .goal q{
+      font-size: 1.5rem;
+      padding: 20px 50px;
+    }
+  }
+
+  @media screen and (max-width: 715px){
+    .hero h1{
+      margin-top: 200px;
+    }
+  }
+
+  @media screen and (max-width: 685px){
+    h1{font-size: 2.5rem;}
+    .headline{margin: 0px;}
+    
+  }
+
+  @media screen and (max-width: 600px){
+    .specialization .title{font-size: 1.5rem;}
+    #zocdoc{scale: .75;}
+    .point h3{padding-left: 0px;}
+  }
+
+  @media screen and (max-width: 500px){    
+    .specialization .title{flex-direction: column;}
+    .workSteps{text-align: start;}
+    .workSteps h3{
+      font-size: 1rem;
+      padding-left: 0px;
+      padding-right: 10px;
+    }
+    .workSteps img{scale: .5;}
+  }
+
+  @media screen and (max-width: 400px){
+    #zocdoc{scale: .5;}
+    .tesText{margin: 0 -20px;}
+  }
+}
+
+.about{
+  @media screen and (max-width: 1800px){
+    .meet{margin-right: 10px;}
+  }
+
+  @media screen and (max-width: 1800px){
+    .meet{margin-right: 0px;}
+  }
+
+  @media screen and (max-width: 1440px) {
+    .founder .name{
+      font-size: 1.5rem;
+    }
+
+    .bio{
+      padding-right: 70px;
+      padding-left:  70px;
+    }
+
+    .bio h3, .bio h4{
+      margin: 10px;
+    }
+
+    .questions h1{
+      font-size: 3rem;;
+    }
+    .questions h3{
+      font-size: 1.5rem;
+    }
+
+    h2{
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 1260px){
+    .aboutMain div{
+      padding: 0px;
+    }
+    .bio{
+      padding-top: 25px;
+    }    
+  }
+
+  @media screen and (max-width: 1150px){
+    .founder{padding: 0px;}
+    .founder .name{font-size: 1rem;}
+    .role{font-size: 1rem;}
+    .meetLogo{scale: .5;}
+  }
+
+  @media screen and (max-width: 1000px){
+    .bio{
+      padding: 0 10px;
+    }
+    .questions h1{letter-spacing: normal;}
+  }
+
+  @media screen and (max-width: 850px){
+    .support p{
+      font-size: 1.2rem;
+    }
+    .councel h4{
+      font-size: 1.2rem
+    }
+    h3{font-size: 1.5rem;}
+    .bio{line-height: 1.2;}
+  }
+
+  @media screen and (max-width: 720px){
+    .aboutMain{flex-direction: column;}
+    .support, .councel{width: auto;}
+    .questions{padding: 0 20px;}
+    .meet{
+      flex-direction: column;
+      height: auto;
+    }
+    .meetLogo{scale: .5;}
+    .founder img:first-child{
+      height: 600px;
+      width: 600px;
+      border-radius: 20px;
+      margin-top: 0px;
+      margin-bottom: 50px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    .founder, .bio{
+      height: auto;
+      width: auto;
+    }
+    .founder .name{font-size: 2rem;}
+  }
+
+  @media screen and (max-width: 610px){
+    .bio{justify-content: space-evenly;}
+    .bio h4{font-size: 1rem;}
+    .founder .name{text-align: center;}
+    .founder img:first-child{
+      height: 400px;
+      width: 400px;
+      border-radius: 20px;
+      margin-top: 0px;
+      margin-bottom: 50px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  @media screen and (max-width: 485px){
+    .founder .name{font-size: 1.5rem;}
+  }
+
+  @media screen and (max-width: 450px){
+    .support p{
+      padding-left: 10px;
+      padding-right: 10px;
+    }    
+    
+  }
+}
+
+.contact{
+  @media screen and (max-width: 1060px) {
+    .contactMail img, .contactPhone img{scale: .5;}
+    h1{font-size: 2.5rem;}
+    h2{font-size: 2rem;}
+    .mail, .phone{font-size: 1.3rem;}
+    .contactInfo{align-items: center;} 
+  }
+
+  @media screen and (max-width: 1000px){
+    .fruitbowl{display: none;}
+    .contactInfo h1{padding-left: 0px;}
+    .contactMain{margin-top: 20dvh;}
+  }
+
+  @media screen and (max-width: 721px){
+    .contactMain{margin-top: 10dvh;}
+  }
+
+  @media screen and (max-width: 500px){
+    .space{width: 5px;}
+    .contactMail img, .contactPhone img{display: none;}
+  }
+}
